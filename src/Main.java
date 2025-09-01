@@ -1,24 +1,24 @@
 
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
+
     public Main() {
         initComponents();
         // ACA PONER TODO LOS COMANDOS QUE QUIERAS Y MAS COSAS SOBRE EL PANEL Y LA MODIFICACION DEL CODIGO Y ASI
-        
+        botones();
         this.setLocationRelativeTo(null);
-        
+
     }
-    
-    
-    
-    
-    @SuppressWarnings("unchecked")
+
+    @SuppressWarnings( "unchecked" )
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
         botones = new javax.swing.ButtonGroup();
+        grupoBotones = new javax.swing.ButtonGroup();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -160,84 +160,72 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonconvertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonconvertActionPerformed
-        
+
         // AGREGACION DE LOS SUBBOTONES
-        botones.add(jRadioFahrenheit);
-        botones.add(jRadioCelsius);
-        botones.add(jRadioKelvin);
-        botones.add(jRadioRadianes);
-        // AGREGACION DE LOS SUBBOTONES
-        // MIREN UN VIDEO DE COMO HACER LA AGRUPACION CON EL NAVEGATOR
-        
         String x = jGrados.getText();
-         double gradosX=0;
-         
-         // SABER SI EL NUMERO ES VALIDO
-        if (x == null || x.isEmpty()) {
+        double gradosX = 0;
+
+        // SABER SI EL NUMERO ES VALIDO
+        if( x == null || x.isEmpty() ) {
             JOptionPane.showMessageDialog(null, "Por favor ingrese un numero para convertir :/   ...");
             return;
         }
-         try {
-                gradosX = Double.parseDouble(x);
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(null, "Ingrese un numero vaalido");
-         }
-         // SABER SI EL NUMERO ES VALIDO
-         
-         
-         // RADIO BOTONES
-         if(jRadioFahrenheit.isSelected()){
-             double j = gradosX * 9.0/5 + 32;
-             JOptionPane.showMessageDialog(null, "Tus grados a Fahrenheit son: " + j);
-         }
-         if(jRadioCelsius.isSelected()){
-             double j = (gradosX - 32) * 5.0/9;
-             JOptionPane.showMessageDialog(null, "Tus grados a Celsius son: " + j);
-         }
-         if(jRadioKelvin.isSelected()){
-             double j = gradosX + 273.15;
-             JOptionPane.showMessageDialog(null, "Tus grados a Kelvin son: " + j);
-         }
-         if(jRadioRadianes.isSelected()){
-             double j = Math.toRadians(gradosX);
-             JOptionPane.showMessageDialog(null, "Tus grados a Fahrenheit son: " + j);
-         }
-         // RADIO BOTONES
-         
-         /* 
+        try {
+            gradosX = Double.parseDouble(x);
+        } catch( NumberFormatException e ) {
+            JOptionPane.showMessageDialog(null, "Ingrese un numero vaalido");
+        }
+        // SABER SI EL NUMERO ES VALIDO
+
+        // RADIO BOTONES
+        if( jRadioFahrenheit.isSelected() ) {
+            double j = gradosX * 9.0 / 5 + 32;
+            JOptionPane.showMessageDialog(null, "Tus grados a Fahrenheit son: " + j);
+        }
+        if( jRadioCelsius.isSelected() ) {
+            double j = (gradosX - 32) * 5.0 / 9;
+            JOptionPane.showMessageDialog(null, "Tus grados a Celsius son: " + j);
+        }
+        if( jRadioKelvin.isSelected() ) {
+            double j = gradosX + 273.15;
+            JOptionPane.showMessageDialog(null, "Tus grados a Kelvin son: " + j);
+        }
+        if( jRadioRadianes.isSelected() ) {
+            double j = Math.toRadians(gradosX);
+            JOptionPane.showMessageDialog(null, "Tus grados a Fahrenheit son: " + j);
+        }
+        // RADIO BOTONES
+
+        /*
              /\_/\           ___
-            = o_o =_______    \ \ 
+            = o_o =_______    \ \
              __^      __(  \.__) )
          (@)<_____>__(_____)____/
          */
-                 
-         
     }//GEN-LAST:event_BotonconvertActionPerformed
 
     private void jRadioFahrenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioFahrenheitActionPerformed
     }//GEN-LAST:event_jRadioFahrenheitActionPerformed
 
-    
-    
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+            for( javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels() ) {
+                if( "Nimbus".equals(info.getName()) ) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
+        } catch( ClassNotFoundException ex ) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
+        } catch( InstantiationException ex ) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
+        } catch( IllegalAccessException ex ) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch( javax.swing.UnsupportedLookAndFeelException ex ) {
             java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -252,6 +240,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Botonconvert;
     private javax.swing.ButtonGroup botones;
+    private javax.swing.ButtonGroup grupoBotones;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JTextField jGrados;
     private javax.swing.JLabel jLabel1;
@@ -263,4 +252,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioKelvin;
     private javax.swing.JRadioButton jRadioRadianes;
     // End of variables declaration//GEN-END:variables
+    private void botones() {
+        ButtonGroup grupoBotones = new ButtonGroup();
+
+        // AGREGACION DE LOS SUBBOTONES
+        grupoBotones.add(jRadioFahrenheit);
+
+        grupoBotones.add(jRadioCelsius);
+
+        grupoBotones.add(jRadioKelvin);
+
+        grupoBotones.add(jRadioRadianes);
+
+    }
 }
