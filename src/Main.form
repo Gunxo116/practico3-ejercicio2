@@ -19,6 +19,8 @@
     </Container>
     <Component class="javax.swing.ButtonGroup" name="botones">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="grupoBotones">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
